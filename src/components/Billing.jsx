@@ -1,4 +1,5 @@
 import { apple, bill, google } from "../assets";
+import { stats } from "../constants";
 import styles, { layout } from "../style";
 
 const Billing = () => (
@@ -13,21 +14,19 @@ const Billing = () => (
     </div>
 
     <div className={layout.sectionInfo}>
-      <h2 className={styles.heading2}>
-        Easily control your <br className="sm:block hidden" /> billing &
-        invoicing
-      </h2>
-      <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        Elit enim sed massa etiam. Mauris eu adipiscing ultrices ametodio
-        aenean neque. Fusce ipsum orci rhoncus aliporttitor integer platea
-        placerat.
+    <div className={`sm:ml-10  flex-col mb-6`}>
+  {stats.map((stat) => (
+    <div key={stat.id} className={`w-full sm:w-auto flex justify-start items-center sm:flex-col sm:items-end m-3 sm:mb-2 sm:mt-10`} >
+      <h4 className="font-poppins font-semibold xs:text-[90.89px] text-[30.89px] xs:leading-[53.16px] leading-[43.16px] text-white sm:mb-7">
+        {stat.value}
+      </h4>
+      <p className="font-poppins font-bold xs:text-[40.45px] text-[25.45px] xs:leading-[26.58px] leading-[21.58px] text-gradient uppercase ml-3 sm:mb-5 sm:ml-0">
+        {stat.title}
       </p>
-
-      <div className="flex flex-row flex-wrap sm:mt-10 mt-6">
-        <img src={apple} alt="google_play" className="w-[128.86px] h-[42.05px] object-contain mr-5 cursor-pointer" />
-        <img src={google} alt="google_play" className="w-[144.17px] h-[43.08px] object-contain cursor-pointer" />
-      </div>
     </div>
+  ))}
+</div>
+</div>
   </section>
 );
 

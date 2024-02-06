@@ -1,15 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
-
+/* @import url("https://fonts.googleapis.com/css2?family=Bueno:wght@400;500;600;700;800;900&display=swap"); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  
   --black-gradient: linear-gradient(
     144.39deg,
-    #ffffff -278.56%,
-    #6d6d6d -78.47%,
-    #11101d 91.61%
+    #0066cc -278.56%,
+    #004080 -78.47%,
+    #001a4d 91.61%
   );
   --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
 }
@@ -18,21 +19,41 @@
   scroll-behavior: smooth;
 }
 
+.bg-primary{
+  background-color: #64c1da;
+}
+
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
-    #def9fa 0.89%,
-    #bef3f5 17.23%,
-    #9dedf0 42.04%,
-    #7de7eb 55.12%,
-    #5ce1e6 71.54%,
-    #33bbcf 100%
+    #000066 0%,      /* Dark blue */
+    #001a4d 20.67%,   /* Medium dark blue */
+    #004080 35.33%,  /* Medium blue */
+    #0066cc 50%,     /* Blue */
+    #004080 70.67%,  /* Medium blue */
+    #001a4d 83.33%,   /* Medium dark blue */
+    #000066 100%     /* Dark blue */
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+
+  animation: moveGradient 3s linear infinite; /* Adjust the duration as needed */
 }
+
+@keyframes moveGradient {
+  0% {
+    background-size: 100% 100%;
+  }
+  50% {
+    background-size: 150% 150%; /* Adjust the size based on your preference */
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
 
 .bg-blue-gradient {
   background: linear-gradient(
@@ -108,10 +129,17 @@
 }
 
 .feature-card:hover {
+  color: rgb(255, 255, 255);
+
   background: var(--black-gradient);
   box-shadow: var(--card-shadow);
 }
+.feature-card {
+  color: rgb(11, 10, 10);
 
+  background: rgb(183, 213, 247);
+  box-shadow: var(--card-shadow);
+}
 .feedback-container .feedback-card:last-child {
   margin-right: 0px;
 }

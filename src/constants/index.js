@@ -7,15 +7,15 @@ export const navLinks = [
   },
   {
     id: "features",
-    title: "Features",
+    title: "Services",
   },
   {
-    id: "product",
-    title: "Product",
+    id: "product1",
+    title: "Products",
   },
   {
-    id: "clients",
-    title: "Clients",
+    id: "contact",
+    title: "Contact Us",
   },
 ];
 
@@ -23,23 +23,38 @@ export const features = [
   {
     id: "feature-1",
     icon: star,
-    title: "Rewards",
+    title: "Web Development",
     content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
+    "Craft visually stunning and user-friendly websites tailored to your unique brand identity."
+      // "The best credit cards offer some tantalizing combinations of promotions and prizes",
   },
   {
-    id: "feature-2",
-    icon: shield,
-    title: "100% Secured",
+    id: "Kitchen",
+    icon: star,
+    title: "Mobile App",
     content:
-      "We take proactive steps make sure your information and transactions are secure.",
+      "Build intuitive and user-friendly mobile applications for iOS and Android platforms.",
   },
   {
     id: "feature-3",
-    icon: send,
-    title: "Balance Transfer",
+    icon: star,
+    title: "AI",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+      "Build AI-powered chatbots for websites and messaging platforms to provide instant customer support.",
+  },
+  {
+    id: "feature-3",
+    icon: star,
+    title: "social media management",
+    content:
+      "Work closely with clients to understand their goals, target audience, and brand identity.",
+  },
+  {
+    id: "feature-3",
+    icon: star,
+    title: "social media Marketting",
+    content:
+      "Advertising campaigns on platforms like Facebook, Instagram, Twitter, LinkedIn, ",
   },
 ];
 
@@ -73,18 +88,18 @@ export const feedback = [
 export const stats = [
   {
     id: "stats-1",
-    title: "User Active",
-    value: "3800+",
+    title: "Services Provided",
+    value: "5+",
   },
   {
     id: "stats-2",
-    title: "Trusted by Company",
-    value: "230+",
+    title: "Projects Completed",
+    value: "10+",
   },
   {
     id: "stats-3",
-    title: "Transaction",
-    value: "$230M+",
+    title: "Products ",
+    value: "3+",
   },
 ];
 
